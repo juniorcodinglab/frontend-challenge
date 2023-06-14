@@ -24,16 +24,16 @@ const CartCount = styled.span`
 const Container = styled.div`
     position: relative;
 
-    padding: 0 20px ;
+    padding: 0 ;
 `;
 
 export function CartControl() {
-    const { value } = useLocalStorage('cart-items');
+    const { value } = useLocalStorage('cart-items', []);
 
     return (
         <Container>
             <CartIcon />
-            <CartCount>7</CartCount>
+            {value.length > 0 &&  <CartCount>{value.length}</CartCount>}
         </Container>
     )
 }

@@ -21,22 +21,31 @@ const TagHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 10px;
 
     > div {
         display: flex;
         align-items: center;
         justify-content: center;    
     }
+
+    @media (min-width: ${props => props.theme.desktopBreakpoint}) {
+        padding: 20px 160px;
+    }
 `;
 
 const Logo = styled.a`
     color: #5D5D6D;
     font-weight: 400;
-    font-size: 40px;
     line-height: 150%;
+    font-size: 20px;
+    padding: 0;
+
+    @media (min-width: ${props => props.theme.desktopBreakpoint}) {
+        font-size: 40px;
+    }
 `;
 
 

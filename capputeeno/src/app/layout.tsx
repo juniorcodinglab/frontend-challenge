@@ -1,3 +1,4 @@
+import { DefaultProviders } from '@/components/default-providers'
 import './globals.css'
 
 import { Header } from '@/components/header'
@@ -20,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={saira.className}>
-        <FilterContextProvider>
+        <DefaultProviders>
           <Header />
           {children}
-        </FilterContextProvider>
+        </DefaultProviders>
       </body>
     </html>
   )
