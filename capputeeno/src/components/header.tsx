@@ -43,6 +43,10 @@ const Logo = styled.a`
     font-size: 20px;
     padding: 0;
 
+    @media (min-width: ${props => props.theme.desktopBreakPoint}) {
+        font-size: 16px;
+    }
+
     @media (min-width: ${props => props.theme.desktopBreakpoint}) {
         font-size: 40px;
     }
